@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body>
+    
+    <div class="discovery-land-page">
+
+
+        <div class="discovery-header">
+
+            <div class="discovery-header-logo"><img src="../assests/gallery/logo-light.svg" class="logo"></div>
+            <div class="discovery-header-nav">
+                <div class="discovery-header-nav-about"><a href="./aboutDLC.html" class="ahref"><h3 class="h3-nav">About DLC</h3></a></div>
+                <div class="discovery-header-nav-ourworlds"><a href="./ourWorld.html"  class="ahref"><h3 class="h3-nav">Our World</h3></a></div>
+                <div class="discovery-header-nav-experiences"><a href="./experiences.html" class="ahref"><h3 class="h3-nav">Experiences</h3></a></div>
+
+                <div class="discovery-header-nav-gallery"><h3 class="h3-nav">Gallery</h3></a></div>
+                <div class="discovery-header-nav-btn">
+                    <a href="./dropdown.html">
+                    <button type="button" class="btn-main" id="goToDropdown">=</button></div></a>
+            </div>
+
+        </div>   
+
+        <div class="discovery-main-cnt">
+            <div class="discovery-main-cnt-gallery"><img src="../assests/gallery/img1.jpg" class="img1"><h4 class="img1-cnt">Gallery</h4></div>
+
+            <div class="discovery-main-cnt-2">
+                <div class="discovery-main-cnt-landscapes"><img src="../assests/gallery/img2.jpg" class="img2"><h4 class="img2-cnt">Landscapes</h4></div>
+                <div class="discovery-main-cnt-golf"><img src="../assests/gallery/img3.jpg" class="img2"><h4 class="img2-cnt">Golf</h4></div>
+                <div class="discovery-main-cnt-wellness"><img src="../assests/gallery/img4.jpg" class="img2"><h4 class="img2-cnt">Wellness</h4></div>
+            </div>
+
+            <div class="discovery-main-cnt-3">
+                <div class="discovery-main-cnt-2-outdoor"><img src="../assests/gallery/img5.jpg" class="img2"><h4 class="img2-cnt">Outdoor Pursuits</h4></div>
+                <div class="discovery-main-cnt-2-clubhouse"><img src="../assests/gallery/img6.jpg" class="img2"><h4 class="img2-cnt">Clubhouses</h4></div>
+                <div class="discovery-main-cnt-2-lifestyle"><img src="../assests/gallery/img7.jpg" class="img2"><h4 class="img2-cnt">Lifestyle</h4></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="discovery-footer">
+
+            <div class="discovery-footer-logo"><img src="../assests/gallery/logo-mark.svg"></div>
+
+            <div class="discovery-footer-drop1">
+                <div class="discovery-footer-drop1-1"><h5>GET IN TOUCH</h5></div>
+                <div class="discovery-footer-drop1-2"><h2>(480) 624-5200</h2><br>info@discoverylandco.com</br></div>
+                <div class="discovery-footer-drop1-3"><br><h5>REAL ESTATE</h5></div>
+                <div class="discovery-footer-drop1-4"><h2>realestate@discoverylandco.com</h2></div>
+            </div>
+
+            <div class="discovery-footer-drop2">
+                <div class="discovery-footer-drop2-1"><a href="./aboutDLC.html"><h2>About</h2></a></div>
+                <div class="discovery-footer-drop2-2"><h2>Our World</h2></div>
+                <div class="discovery-footer-drop2-3"><a href="./experiences.html"><h2>Experiences</h2></a></div>
+                <div class="discovery-footer-drop2-4"><a href="./gallery.html"><h2>Gallery</h2></a></div>
+            </div>
+
+            <div class="discovery-footer-drop3">
+                <div class="discovery-footer-drop3-1"><h2>Foundation</h2></div>
+                <div class="discovery-footer-drop3-2"><h2>Careers</h2></div>
+                <div class="discovery-footer-drop3-3"><h2>Company</h2></div>
+                <div class="discovery-footer-drop3-4"><h2>Contact</h2></div>
+                <div class="discovery-footer-drop3-5"><h2>Privacy</h2></div>
+            </div>
+
+            <div class="discovery-footer-drop4">
+                <div class="discovery-footer-drop4-1"><h2>© Discovery Land Company. All rights reserved.</h2></div>
+                <div class="discovery-footer-drop4-2"><h2>Site by Outpost</h2></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let lastScrollTop = 0;
+        let header = document.querySelector(".discovery-header");
+        let logo = document.querySelector(".logo");
+        let timeout = null;
+        
+        const originalLogo = "../assests/gallery/logo-light.svg";
+        const scrolledLogo = "../assests/gallery/logo-dark.svg";
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        
+            clearTimeout(timeout);
+        
+            if (scrollTop > lastScrollTop) {
+                header.classList.add("scrolled");
+                logo.src = scrolledLogo;
+                header.classList.remove("scrolled-up");
+        
+                timeout = setTimeout(() => {
+                    if (window.scrollY > 100) {
+                        header.classList.add("hidden");
+                    }
+                }, 500);
+            } else {
+                header.classList.remove("hidden");
+                header.classList.add("scrolled-up");
+                logo.src = scrolledLogo;
+        
+                timeout = setTimeout(() => {
+                    header.classList.remove("scrolled-up");
+                    header.classList.remove("scrolled");
+                    logo.src = originalLogo;
+                }, 1200);
+            }
+        
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
+
+
+
+        document.getElementById('goToDropdown').addEventListener('click', function() {
+            localStorage.setItem('referrerPage', window.location.href); 
+            window.location.href = 'dropdown.html'; 
+        });
+        </script>
+            
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Menu</title>
+    <link rel="stylesheet" href="../css/dropdown.css">
+</head>
+<body>
+
+    <div class="discovery-land-page">
+
+
+        <div class="discovery-header">
+
+            <div class="logo">
+                <img src="../assests/gallery/logo-light.svg" class="logo">
+            </div>
+            <div class="nav-btn">
+                
+                <button type="button" class="btn-main" id="backButton">x</button>
+            </div>
+
+
+        </div>    
+
+
+        <div class="discovery-main">
+            <div class="main-cnt">
+                <div class="nav">
+                    <a href="./aboutDLC.html"><h1 class="h1">About DLC</h1></a>
+                </div>
+                <div class="nav">
+                   <a href="./ourWorld.html"><h1 class="h1">Our World</h1></a>
+                </div>
+                <div class="nav">
+                   <a href="./experiences.html"><h1 class="h1">Experiences</h1></a>
+                </div>
+                <div class="nav">
+                   <a href="./gallery.html"><h1 class="h1">Gallery</h1></a>
+                </div>
+            </div>
+
+            <div class="main-video">
+                <video src="https://player.vimeo.com/progressive_redirect/playback/769653111/rendition/1080p/file.mp4?loc=external&amp;signature=ed68edc6f93d6322ab788f73a6c328d62ef27555627cc8b2c6a85fdaf8e4c696" class="video"  autoplay muted></video>
+                <h1 class="h1">Discover Your World</h1>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            const referrerPage = localStorage.getItem('referrerPage');
+            if (referrerPage) {
+                window.location.href = referrerPage; 
+            } else {
+                window.location.href = 'page1.html';
+            }
+        });
+    </script>
+</body>
+</html>
