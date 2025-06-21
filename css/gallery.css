@@ -1,0 +1,511 @@
+body{
+    background-color: black;
+    color: white;
+}
+.discovery-header {
+    text-decoration: none;
+    width: 100%;
+    height: 8vw;
+    margin-bottom: 10vw;
+    
+    position: fixed; /* Keep it fixed on top */
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* When scrolled, change header to white */
+.discovery-header.scrolled {
+    background-color: white;
+    color: black;
+}
+
+/* Adjust text links when scrolled */
+.discovery-header.scrolled .h3-nav {
+    color: black;
+}
+
+.discovery-header.scrolled .h3-nav::after {
+    background-color: black; /* Change underline color */
+}
+
+/* Hide header when scrolling down */
+.discovery-header.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks when hidden */
+}
+
+/* When scrolling back up, make header white before restoring */
+.discovery-header.scrolled-up {
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+
+
+
+.logo{
+    height: 2.5vw;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+
+
+.discovery-header.scrolled .logo {
+    content: url("black-logo.png"); /* Change to black logo */
+}
+
+/* Restore logo when scrolling back up */
+.discovery-header.scrolled-up .logo {
+    content: url("white-logo.png"); /* Change back to white logo */
+}
+
+
+
+
+
+
+
+
+
+
+.ahref{
+    text-decoration: none;
+}
+.discovery-header-nav{
+    display: flex;
+    gap: 5%;
+    justify-content: end;
+    margin-left: 30%;
+    margin-top: -4.5%;  
+     
+
+}
+
+
+
+.h3-nav{
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-size: 20px;
+    font-weight: bold;
+}
+.h3-nav::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: white; /* Underline color */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+}
+
+.h3-nav:hover::after{
+    width: 100%;
+}
+
+.discovery-header-nav-btn  {
+    background: none;
+    font-size: 3vw;
+    /* color: white; */
+    cursor: pointer;
+    /* margin-right: -76%; */
+    border-width: 50%;
+}
+
+
+
+
+/* button */
+
+.btn-main{
+    background-color:transparent;
+    border-color: #d8d7d7;
+    font-size: 1.5vw;
+    padding: 52% 56%;
+    margin-left: -220%;
+    margin-top: -4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img2-cnt{
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.img1{
+    width: 100%;
+    height: 40vw;
+}
+.img1-cnt{
+    margin-top: -27%;
+    margin-left: 40%;
+    font-size: 6vw;
+    font-family:serif;
+    color: beige;
+    position: relative;
+    animation: slideUp 1s ease-in-out forwards;
+
+
+    /* z-index: -1; */
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); /* Start from below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to original position */
+        opacity: 1;
+    }
+}
+
+.discovery-main-cnt-2{
+    display: flex;
+}
+
+.discovery-main-cnt-3{
+    display: flex;
+}
+.img2{
+    width: 33vw;
+    height: 20vw;
+}
+
+
+
+
+.discovery-footer{
+    margin-top: 10%;
+    padding: 4%;
+}
+
+
+.discovery-footer-drop1{
+    
+    margin-top: -3.5%;
+    margin-left: 30%;
+}
+
+.discovery-footer-drop2{
+    display: flex;
+    flex-direction: column;
+    gap: -10%;
+    margin-top: -15%;
+    margin-left: 60%;
+}
+
+.discovery-footer-drop3{
+    margin-top: -10.7%;
+    margin-left: 80%;
+}
+
+
+.discovery-footer-drop4{
+    margin-top: 10%;
+    display: flex;
+    gap: 47%;
+    margin-left: 4%;
+}
+
+
+/* Hover effect with animated underline */
+.discovery-footer h2 {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    line-height: 1.2; 
+
+    position: relative;
+    color: #fff;
+    padding-bottom: 5px; /* Space for the line */
+    display: inline-block; /* Keep it inline to work with the pseudo-element */
+}
+
+.discovery-footer h2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Line thickness */
+    bottom: 0;
+    left: 0;
+    background-color: #fff; /* White line color */
+    transition: width 0.3s ease-out;
+}
+
+/* Hover effect that triggers the sequence */
+.discovery-footer h2:hover::after {
+    animation: lineAnimation 2s ease-out forwards;
+}
+
+/* Keyframes for the full effect */
+@keyframes lineAnimation {
+    0% {
+        width: 0%; /* Line starts invisible */
+    }
+    40% {
+        width: 100%; /* Line grows from left to right */
+    }
+    60% {
+        width: 0%; /* Line disappears */
+    }
+    100% {
+        width: 100%; /* Line comes back again */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Devices (220px - 480px) */
+@media only screen and (min-width: 120px) and (max-width: 700px) {
+    .discovery-land-page{
+        width: 100%;
+        height: 100%;
+    }
+
+    .discovery-header {
+        /* width: 100vw; */
+        height: 12vw;
+    }
+
+    .logo {
+        height: 8vw;
+    }
+
+    .discovery-header-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 700vw;
+        margin-top: 0;
+    }
+
+    .discovery-header-nav-btn{
+        position: fixed;
+        top: 13px; /* Ya apni zaroorat ke mutabiq adjust karein */
+        right: 10px;
+        z-index: 1000; /* Ensure karein ke button sabse upar rahe */
+        display: block; /* Ensure ke button dikhe */
+    }
+    .btn-main{
+        padding: 60%;
+        font-size: 3vw;
+    }
+    .discovery-main-cnt{
+        width: 100vw;
+    }
+    .img1 {
+        height: 80vw;
+    }
+
+    .img1-cnt {
+        font-size: 11vw;
+        margin-left: 34%;
+        margin-top: -51%;
+    }
+    .img2-cnt{
+        font-size: 4vw;
+    }
+
+    .discovery-main-cnt-2,
+    .discovery-main-cnt-3 {
+        margin-top: 38.5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .discovery-footer-drop1,
+    .discovery-footer-drop2,
+    .discovery-footer-drop3 {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .discovery-footer-drop4 {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 10%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*Tablet Devices (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .discovery-header {
+        height: 10vw;
+    }
+
+    .logo {
+        height: 6vw;
+    }
+
+    .discovery-header-nav {
+        gap: 3%;
+        margin-left: 20%;
+        margin-top: -7%;
+    }
+
+    .img1 {
+        height: 45vw;
+    }
+
+    .img1-cnt {
+        font-size: 5rem;
+        margin-left: 36%;
+        margin-top: -26%;
+    }
+
+    .img2-cnt{
+        font-size: 4vw;
+    }
+
+    .discovery-main-cnt-2,
+    .discovery-main-cnt-3 {
+        margin-top: 16.5%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .img2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .discovery-footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .discovery-footer-drop1,
+    .discovery-footer-drop2,
+    .discovery-footer-drop3 {
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    .discovery-footer-drop4 {
+        gap: 30%;
+        margin-left: 5%;
+    }
+}
+
+/* Laptop and Larger Screens (1025px and above) */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .discovery-header {
+        height: 8vw;
+    }
+
+    .logo {
+        height: 4vw;
+    }
+
+    .discovery-header-nav {
+        gap: 5%;
+        margin-left: 30%;
+    }
+
+    .img1 {
+        height: 40vw;
+    }
+
+    .img1-cnt {
+        font-size: 6vw;
+        margin-left: 40%;
+        margin-top: -27%;
+    }
+
+    .discovery-main-cnt-2,
+    .discovery-main-cnt-3 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .img2 {
+        width: 33vw;
+        height: 20vw;
+    }
+
+    .discovery-footer-drop2{
+        margin-top: -17%;
+    }
+
+    .discovery-footer-drop3{
+        margin-top: -12%;
+    }
+
+    .discovery-footer-drop4 {
+        gap: 47%;
+        margin-left: 4%;
+    }
+} 

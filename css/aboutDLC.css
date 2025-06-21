@@ -1,0 +1,830 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.discovery-header {
+    text-decoration: none;
+    width: 100%;
+    height: 8vw;
+    margin-bottom: 10vw;
+    
+    position: fixed; 
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1000; 
+}
+
+
+.discovery-header.scrolled {
+    background-color: white;
+    color: black;
+}
+
+
+.discovery-header.scrolled .h3-nav {
+    color: black;
+}
+
+.discovery-header.scrolled .h3-nav::after {
+    background-color: black; 
+}
+
+
+.discovery-header.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.discovery-header.scrolled-up {
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+
+
+
+.logo{
+    height: 2.5vw;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+
+
+.discovery-header.scrolled .logo {
+    content: url("black-logo.png"); 
+}
+
+
+.discovery-header.scrolled-up .logo {
+    content: url("white-logo.png"); 
+}
+
+
+
+
+
+
+
+
+
+
+.ahref{
+    text-decoration: none;
+}
+.discovery-header-nav{
+    display: flex;
+    gap: 5%;
+    justify-content: end;
+    margin-left: 27%;
+    margin-top: -2%;  
+     
+
+}
+
+
+
+.h3-nav{
+    position: relative;
+    text-decoration: none;
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.h3-nav::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: white; 
+    transition: width 0.4s ease-in-out;
+}
+
+.h3-nav:hover::after{
+    width: 100%;
+}
+
+.discovery-header-nav-btn  {
+    background: none;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    border-width: 50%;
+    margin-top: -2%;
+}
+
+
+
+
+
+/* button */
+
+.btn-main{
+    background-color:transparent;
+    border-color: #d8d7d7;
+    font-size: 1.5vw;
+    padding: 52% 56%;
+    margin-left: -220%;
+    margin-top: -4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main */
+
+.discovery-main-cnt{
+    width: 100%;
+    height: 100%;
+}
+.discovery-main-cnt-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img1{
+    width: 100vw;
+    margin-bottom: 2%;
+}
+
+.discovery-main-cnt-1-2{
+    margin-top: -2%;
+}
+
+.h3-main-cnt-1{
+    font-size: 6vw;
+    margin-top: -110%;
+    color: white;
+    position: relative;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.h3-main-cnt-2{
+    font-size: 6vw;
+    margin-top: -2%;
+    color: white;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-in-out forwards;
+    
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+.h3-main-cnt-1,.h3-main-cnt-2:in-viewport {
+    animation: slideUp 1s ease-out forwards;
+}
+
+.discovery-main-cnt-1-3{
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    font-size: 3vw;
+}
+
+
+.p {
+
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s, transform 1s; 
+  }
+  .p.animate {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+
+.discovery-main-cnt-2{
+    display: flex;
+    margin-top: 10%;
+}
+.img2{
+    width: 40vw;
+    margin-left: 40%;
+}
+
+.discovery-main-cnt-2-1{
+    width: 25vw;
+    font-size: 1.7vw;
+    color: grey;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+.h2-main-cnt-2-1{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.h2-main-cnt-2-1.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.p-main-cnt-2-1{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.p-main-cnt-2-1.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.discovery-main-cnt-3 {
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20% 0;
+    position: relative;
+}
+
+.discovery-main-cnt-3-2 {
+    width: 98vw;
+    display: flex;
+    gap: 1%;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.discovery-main-cnt-3-2 img3-2 {
+    
+    border-radius: 10px;
+    
+}
+
+.img3-2{
+    width:30vw;
+    height: 40vw;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.h2-main-cnt-3{
+    margin-top: -13%;
+    color: #fff;
+    margin-left: 1%;
+    font-size: 2vw;
+}
+
+.img8{
+    width: 98.8vw;
+    height: 60vw;
+}
+
+
+
+
+
+
+.discovery-main-cnt-5--6{
+    background-color: black;
+    color: white;
+}
+.discovery-main-cnt-5{
+    display: flex;
+
+}
+
+.discovery-main-cnt-5-2{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.discovery-main-cnt-5-3{
+    width: 30vw;
+    font-size: 1.7vw;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.discovery-main-cnt-5-3-2{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.btn-1{
+    padding: 5%;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.video1{
+    margin-top: 10%;
+    width: 80vw;
+    margin-left: 10%;
+}
+
+.img9{
+    width: 100vw;
+    height: 60vw;
+}
+
+.img10{
+    width: 30vw;
+    height: 20vw;
+}
+.img11{
+    width: 40vw;
+    height: 45vw;
+    margin-left: 40%;
+}
+
+.discovery-main-cnt-8{
+    display: flex;
+    margin-top: 10%;
+}
+.discovery-main-cnt-8-2-1{
+    width: 25vw;
+    margin-left: 20%;
+    font-size: 1.5vw;
+    color: grey;
+}
+
+.h2-main-cnt-8-2-1{
+    opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+.h2-main-cnt-8-2-1.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.p-main-cnt-8-2-1{
+    opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+
+}
+
+.p-main-cnt-8-2-1.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+.btn-explore{
+    padding: 4% 6%;
+}
+.discovery-main-cnt-8-2-4{
+    margin-top: 30%;
+    margin-left: 15%;
+}
+
+.img12{
+    width: 100vw;
+    height: 40vw;
+}
+.discovery-main-cnt-9{
+    margin-top: 10%;
+}
+
+.discovery-main-cnt-9-1{
+    display: flex;
+    margin-top: -28%;
+    margin-left: 40%;
+}
+
+.h2-cnt-9{
+    font-size: 5vw;
+    
+    opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+
+}
+
+.h2-cnt-9.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+.p-main-cnt-9{
+    margin-right:20% ;
+    margin-top: 20%;
+    margin-right: 20%;
+}
+.p-cnt-9{
+    font-size: 1.5rem;
+    opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.p-cnt-9.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.discovery-footer{
+    margin-top: 10%;
+    padding: 4%;
+    background-color: black;
+    background-color: black;
+    color: white;
+}
+
+
+.discovery-footer-drop1{
+    
+    margin-top: 0%;
+    margin-left: 30%;
+}
+
+.discovery-footer-drop2{
+    display: flex;
+    flex-direction: column;
+    gap: -10%;
+    margin-top: -10%;
+    margin-left: 60%;
+}
+
+.discovery-footer-drop3{
+    margin-top: -10.7%;
+    margin-left: 80%;
+}
+
+
+.discovery-footer-drop4{
+    margin-top: 10%;
+    display: flex;
+    gap: 47%;
+    margin-left: 4%;
+}
+
+
+/* Hover effect with animated underline */
+.discovery-footer h2 {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    line-height: 1.2; 
+
+    position: relative;
+    color: #fff;
+    padding-bottom: 5px; /* Space for the line */
+    display: inline-block; /* Keep it inline to work with the pseudo-element */
+}
+
+.discovery-footer h2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Line thickness */
+    bottom: 0;
+    left: 0;
+    background-color: #fff; /* White line color */
+    transition: width 0.3s ease-out;
+}
+
+/* Hover effect that triggers the sequence */
+.discovery-footer h2:hover::after {
+    animation: lineAnimation 2s ease-out forwards;
+}
+
+/* Keyframes for the full effect */
+@keyframes lineAnimation {
+    0% {
+        width: 0%; /* Line starts invisible */
+    }
+    40% {
+        width: 100%; /* Line grows from left to right */
+    }
+    60% {
+        width: 0%; /* Line disappears */
+    }
+    100% {
+        width: 100%; /* Line comes back again */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+
+
+/* Laptop (max-width: 1024px) */
+@media only screen and (min-width:769px ) and (max-width: 1024px)
+{
+    .img12{
+        margin-bottom: 5%;
+        width: 100vw;
+    }
+    .discovery-footer-drop1{
+        margin-left: 10%;
+    }
+    .discovery-footer-drop2{
+        margin-top: -15%;
+    }
+    .discovery-footer-drop3{
+        margin-top: -15%;
+    }
+    
+}
+
+
+
+
+/* Tablet (max-width: 1024px) */
+@media only screen and (min-width:430px ) and (max-width: 768px)
+{
+    .discovery-header {
+        height: 10vw;
+        margin-bottom: 12vw;
+    }
+    .logo {
+        height: 4vw;
+        margin-top: 5%;
+    }
+    .discovery-header-nav {
+        margin-left: 20%;
+        gap: 3%;
+        margin-top: -5%;
+    }
+    .h3-nav {
+        font-size: 18px;
+    }
+    .btn-main {
+        font-size: 2vw;
+        padding: 40% 50%;
+        margin-left: -150%;
+    }
+
+    .discovery-main-cnt-1-2{
+        margin-top: 15%;
+    }
+    .h3-main-cnt-1, .h3-main-cnt-2 {
+        font-size: 8vw;
+        
+    
+    }
+
+   
+
+
+    .discovery-main-cnt-1-3 {
+        font-size: 2.5rem;
+    }
+    .discovery-main-cnt-2-1 {
+        width: 35vw;
+        font-size: 1.1rem;
+        margin-left: 5%;
+    }
+    .discovery-main-cnt-5{
+        /* border: 1px solid blue; */
+        flex-direction: column;
+    }
+    .discovery-main-cnt-5-3 {
+        width: 40vw;
+        font-size: 1.3rem;
+    }
+    .discovery-main-cnt-5--6{
+        width: 100%;
+        margin-bottom: 5%;
+        /* border: 1px solid green; */
+    }
+    .discovery-main-cnt-8-2-1 {
+        width: 30vw;
+        font-size: 1rem;
+    }
+    .img12{
+        margin-bottom: 10%;
+        width: 100vw;
+    }
+
+    .discovery-footer{
+        width: 100vw;
+    }
+
+    .discovery-footer-drop1{
+        margin-left: 10%;
+    }
+    .discovery-footer-drop2{
+        margin-left: 60%;
+        margin-top: -19%;
+    }
+    .discovery-footer-drop3{
+        margin-top: -20%;
+    }
+    .discovery-footer-drop4{
+        margin-top: 20%;
+    }
+
+}
+
+
+
+/* Mobile  */
+@media only screen and (min-width:220px ) and (max-width: 430px)
+{
+    .discovery-header {
+        height: 12vw;
+        margin-bottom: 14vw;
+        width: 100vw;
+    }
+    .logo {
+        height: 5vw;
+        margin-top: 6%;
+    }
+    .discovery-header-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 2%;
+        margin-left: 200%;
+        margin-top: 0;
+    }
+    .h3-nav {
+        font-size: 16px;
+    }
+    .discovery-header-nav-btn{
+        position: fixed;
+        top: 23px; /* Ya apni zaroorat ke mutabiq adjust karein */
+        right: 3px;
+        z-index: 1000; /* Ensure karein ke button sabse upar rahe */
+        display: block; /* Ensure ke button dikhe */
+    }
+    .btn-main{
+        padding: 60%;
+        font-size: 3vw;
+    }
+    /* .btn-main {
+        font-size: 3vw;
+        padding: 30% 40%;
+        margin-left: -100%;
+    } */
+    .h3-main-cnt-1, .h3-main-cnt-2 {
+        font-size: 8vw;
+        margin-top: -90%;
+        margin-bottom: 90%;
+    }
+    .img{
+        width: 100vw;
+    }
+    .discovery-main-cnt-1-3 {
+        font-size: 2rem;
+    }
+    .discovery-main-cnt-2{
+        /* border: 2px solid brown; */
+        justify-content: space-between;
+        width: 100%;
+    }
+    .discovery-main-cnt-2-1 {
+        width: 55vw;
+        font-size: 1rem;
+        margin-left: 2%;
+        /* border: 1px olive solid; */
+    }
+    .p-main-cnt-2-1{
+        width: 50vw;
+    }
+    .discovery-main-cnt-2-2{
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .discovery-main-cnt-2-2 img{
+        width: 70%;
+        margin-left: 35px;
+    }
+    .discovery-main-cnt-5{
+        /* border: 1px solid blue; */
+        flex-direction: column;
+    }
+    .discovery-main-cnt-5-3 {
+        width: 50vw;
+        font-size: 1.2rem;
+        /* margin-left: 5%; */
+    }
+    .discovery-main-cnt-8-2-1 {
+        width: 40vw;
+        font-size: 0.9rem;
+    }
+    .discovery-footer-drop1, .discovery-footer-drop2, .discovery-footer-drop3 {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+
+    .discovery-footer-drop4-2{
+        margin-left: -14%;
+    }
+}

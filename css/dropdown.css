@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    color: white;
+}
+.discovery-land-page{
+    width: 100vw;
+    height: 100vh;
+}
+.discovery-header{
+    margin-top: 2%;
+    display: flex;
+    margin-bottom: 5%;
+
+}
+.logo{
+    width:10vw ;
+}
+.nav-btn{
+    margin-left: 85%;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+}
+
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    text-decoration-color:white ;
+}
+
+.h1{
+   
+    color: white;
+}
+.btn-main{
+    padding: 70% 80%;
+    font-size: 1.3vw;
+}
+
+.discovery-main{
+    display: flex;
+}
+.main-cnt{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.main-video{
+    margin-left: 40%;
+}
+.video{
+    width: 40vw;
+}
+
+
+
+
+
+@media only screen and (min-width:220px ) and (max-width: 430px)
+{
+    .discovery-land-page{
+        width: 22%;
+        height: 100%;
+    }
+    .discovery-header{
+        margin-top: 2%;
+        display: flex;
+        margin-bottom: 56%;
+    
+    }
+    .logo{
+        width:30vw ;
+    }
+    .nav-btn{
+        margin-left: 283%;
+    }
+    
+
+
+    .h1{
+   
+        color: white;
+        font-size: 6vw;
+    }
+    .btn-main{
+        padding: 70% 80%;
+        font-size: 3.3vw;
+    }
+    
+    .discovery-main{
+        display: flex;
+    }
+    .main-cnt{
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+    
+    .main-video{
+        margin-left: 90%;
+    }
+    .video{
+        width: 45vw;
+    
+    }
+    
+}
